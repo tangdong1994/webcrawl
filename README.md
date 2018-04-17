@@ -33,3 +33,31 @@ scrapy list
 #使用editor环境变量中定义的编辑器编辑给定的spider
 scrapy edit <spider>
 
+#使用Scrapy下载器下载给定的url并将内容写到标准输出
+scrapy fetch <url>
+
+#在浏览器中打开给定的URL，就像Scrapy Spider看到的那样
+scrapy view <url>
+
+#为指定的URL启动scrapy shell
+scrapy shell
+
+#获取给定url
+scrapy parse <url> [options]
+
+#获取Scrapy的设置值
+scrapy settings [option]
+
+#运行一个包含在Python文件中的Spider，而不必创建项目
+scrapy runspider <spider_file.py>
+
+#打印Scrapy版本，如果与-v一起使用
+scrapy version [-v]
+
+#运行一个快速基准测试
+scrapy bench
+
+还可以使用commands_modules设置来添加自定义项目命令
+eg:COMMANDS_MODULE=‘mybot.commands',
+#使用crawl命令-a选项传递spider参数
+scrapy crawl myspider -a category=electronics
